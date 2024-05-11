@@ -25,6 +25,17 @@
             box-shadow: 0 0 3em #fff;
 
         }
+        .mercurio{
+            position: absolute;
+            background-color: rgb(86, 60, 60);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            animation: rotate-mercurio 1.8s linear infinite;
+        }
         .terra{
             position: absolute;
             width: 50px;
@@ -90,6 +101,14 @@
             top: 40%;
             left: 15%;
         }
+        @keyframes rotate-mercurio{
+            0%{
+                transform: rotate(0deg) translate(125px);
+            }
+            100%{
+                transform: rotate(360deg) translate(125px);
+            }
+        }
 
         @keyframes rotate-terra{
             0%{
@@ -118,6 +137,7 @@
              minha vida!</p>
         </div>
     </div>
+    <div class="mercurio"></div>
     <div class="terra">
         <div class="p2"><p>Ancelmo</p></div>
         <div class="lua"></div>
