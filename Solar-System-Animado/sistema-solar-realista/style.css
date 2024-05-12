@@ -1,15 +1,14 @@
 @charset "UTF-8";
 
 body{
-    margin: auto;
+    margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     overflow: hidden;
-    min-width: 400px;
-    max-width: 100px;
+   
 }
 .container{
     font-size: 6px;
