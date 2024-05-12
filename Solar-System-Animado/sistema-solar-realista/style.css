@@ -6,9 +6,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: black;
     overflow: hidden;
-    min-width: 400px;
+    min-width: 250pxpx;
    
 }
 .container{
