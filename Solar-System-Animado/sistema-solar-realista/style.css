@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 body{
-    margin: auto;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: blue;
     overflow: hidden;
-    min-width: 250px;
    
 }
 .container{
+    
+    min-width: 300px;
     font-size: 6px;
     width: 40em;
     height: 40em;
