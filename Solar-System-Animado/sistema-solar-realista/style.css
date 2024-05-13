@@ -11,9 +11,8 @@ body{
 }
 .container{
     
-    min-width: 300px;
     font-size: 6px;
-    
+    width: 40em;
     height: 40em;
     position: relative;
 }
