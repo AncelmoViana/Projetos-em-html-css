@@ -5,165 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>treinando solar system</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
             
-        }
+
         body{
-    
+            
             display: flex;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: black;
             justify-content: center;
             align-items: center;
             height: 100vh;
-        
+            overflow: hidden;
+          
         }
-
+        .container{
+            font-size: 6px;
+            width: 40em;
+            height: 40em;
+            position: relative;
+        }
         .sol{
-            
-            background-color: rgb(255, 162, 0);
+            position: absolute ;
+            align-items: center;
+            justify-content: center;
+            background-color: yellow;
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            transform-origin: top left;
-            box-shadow: 0px 0px 2em #fff;
-
+            top: 15em;
+            left: 15em;
+            box-shadow: 0 0 3em white;
         }
-        
-            
-        .mercurio{
+        .terra, .venus, .mercurio{
             position: absolute;
-            background-color: rgb(98, 41, 41);
-            width: 20px;
-            height: 20px;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0 0;
             border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform-origin: top left;
-            animation: rotate-mercurio 1.5s linear infinite;
             
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: white;
-            font-size: 1vh;
-            text-align: center;
-        }
-        
-        .venus{
-            position: absolute;
-            background-color: rgb(61, 61, 14);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform-origin: top left;
-            animation: rotate-venus 2.9s linear infinite ;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: white;
-            font-size: 0.2em;
-            text-align: center;
 
         }
         .terra{
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background-color: #2196f3;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform-origin: top left;
-            animation: rotate-terra 7.6s linear infinite;
+           
+            background-color: #007FFF;
+            top: 52%;
+            left: 52%;
+            width: 30px;
+            height: 30px;
+            animation: terra 8s linear infinite;
         }
         .lua{
             position: absolute;
-            background-color: #bdbdbd;
+            background-color: silver;
+            top: 35%;
+            left: 35%;
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform-origin: top left;
-            animation: rotate-lua 6s linear infinite;
+            animation: lua 2s linear infinite;
+
         }
+        .mercurio{
+            background-color: rgb(113, 26, 26);
+            top: 55%;
+            left: 55%;
+            width: 20px;
+            height: 20px;
+            animation: mercurio 2s linear infinite;
+        }
+        .venus{
+            background-color: rgb(34, 18, 18);
+            top: 53%;
+            left: 53%;
+            width: 25px;
+            height: 25px;
+            animation: venus 4.5s linear infinite;
+        }
+      
         
-        .sol::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 290px;
-            height: 290px;
-            border: 1px dashed rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            transform-origin: 0 0;
-            transform: translate(-50%, -50%);
-        }
-        .linha2::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 140px;
-            height: 140px;
-            border: 1px dashed rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            transform-origin: 0 0;
-            transform: translate(-50%, -50%);
-
-           
-        }
-        .linha3::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 199px;
-            height: 199px;
-            border: 1px dashed rgba(255, 255, 255, 0.5) ;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .terra::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            border: 1px dashed rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-        @keyframes rotate-mercurio{
+        @keyframes terra{
             0%{
-                transform: rotate(0deg) translate(60px);
+                transform: rotate(0deg) translate(175px);
             }
             100%{
-                transform: rotate(360deg) translate(60px);
+                transform: rotate(360deg) translate(175px);
             }
         }
-        @keyframes rotate-venus{
-            0%{
-                transform: rotate(0deg) translate(85px);
-            }
-            100%{
-                transform: rotate(360deg) translate(85px); 
-            }
-        }
-
-        @keyframes rotate-terra{
-            0%{
-                transform: rotate(0deg) translate(125px);
-            }
-           100%{
-                transform: rotate(360deg) translate(125px);
-           }
-            
-        }
-        @keyframes rotate-lua{
+        @keyframes lua{
             0%{
                 transform: rotate(0deg) translate(25px);
             }
@@ -171,18 +98,36 @@
                 transform: rotate(360deg) translate(25px);
             }
         }
+        @keyframes mercurio{
+            0%{
+                transform: rotate(0deg) translate(75px);
+            }
+            100%{
+                transform: rotate(360deg) translate(75px);
+            }
+        }
+        @keyframes venus{
+            0%{
+                transform: rotate(0deg) translate(105px);
+            }
+            100%{
+                transform: rotate(360deg) translate(105px);
+            }
+        }
     </style>
 </head>
 <body>
     
-        <div class="sol">
-            <div class="linha2"></div>
-            <div class="linha3"></div>
-        </div>
-        <div class="mercurio"> Mercúrio</div>
-        <div class="venus">Vênus</div>
-        <div class="terra">
-            <div class="lua"></div>
+        <div class="container">
+            <div class="sol">
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+            <div class="mercurio"> Mercúrio</div>
+            <div class="venus">Vênus</div>
+            <div class="terra">
+                <div class="lua"></div>
+            </div>
         </div>
     
     
