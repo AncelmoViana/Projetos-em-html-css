@@ -54,7 +54,7 @@ body{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: lua 2s linear infinite;
+    animation: lua 1.5s linear infinite;
 
 }
 .mercurio{
@@ -73,6 +73,17 @@ body{
     height: 35px;
     animation: venus 4.5s linear infinite;
 }
+.terra::before{
+    content: '';
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-size: cover;
+    top: 3em;
+    left: 3em;
+    width: 4em;
+    height: 4em;
+}
 
 
 @keyframes terra{
@@ -85,10 +96,10 @@ body{
 }
 @keyframes lua{
     0%{
-        transform: rotate(0deg) translate(25px);
+        transform: rotate(0deg) translate(30px);
     }
     100%{
-        transform: rotate(360deg) translate(25px);
+        transform: rotate(360deg) translate(30px);
     }
 }
 @keyframes mercurio{
